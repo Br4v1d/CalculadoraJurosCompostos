@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Juros</title>
+    
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Valor Inicial:</td>
+            <td><input type="number" name="ValorInicial" id="ValorInicial"></td>
+        </tr>
+        <tr>
+            <td>Taxa de Juros:</td>
+            <td><input type="number" name="TaxaJuros" id="TaxaJuros"></td>
+        </tr>
+        <tr>
+            <td>Quantidade de meses:</td>
+            <td><input type="number" name="QuantidadeMes" id="QuantidadeMes"></td>         
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><button onclick="Calcular()">Calcular</button></td>
+        </tr>
+        
+    </table>
+
+    <Script type="text/javascript">
+
+        function Calcular() {
+            var ValorInicial = window.document.getElementById("ValorInicial");
+            var ini = Number(ValorInicial.value)
+
+            var TaxaJuros =  window.document.getElementById("TaxaJuros");
+            var tax = Number(TaxaJuros.value)
+
+            var QuantidadeMes = window.document.getElementById("QuantidadeMes");
+            var qnt = Number(QuantidadeMes.value)
+
+            
+           
+            var tax = tax/100;
+
+            var R = ini*Math.pow((1 + tax), qnt);
+            var R = R.toFixed(2)
+
+            alert("O Valor final é: R$ "+R);
+
+        }
+
+    </Script>
+</body>
+</html>
+

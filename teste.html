@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="valorIni" id="valorIni" placeholder="Valor Inicial">
+    <br>
+    <input type="number" name="taxaJ" id="taxaJ" placeholder="Taxa de Juros">
+    <br>
+    <button onclick="calcular()">Calcular</button>
+    <script>
+
+        function calcular() {
+            var varlorIni = window.document.getElementById("valorIni");
+            var taxaJ = window.document.getElementById("taxaJ");
+            var ini = Number(varlorIni.value)
+            var tax = Number(taxaJ.value)
+
+            var res = ini * tax;
+
+            alert("O valor final é: " +res)
+        }
+        
+    </script>
+</body>
+</html>
